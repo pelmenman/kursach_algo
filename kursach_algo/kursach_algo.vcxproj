@@ -130,13 +130,13 @@
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="Kruskal.cpp" />
     <ClCompile Include="kursach_algo.cpp" />
-    <ClCompile Include="OstovFinder.cpp" />
     <ClCompile Include="Prim.cpp" />
+    <ClCompile Include="graphUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edge.h" />
+    <ClInclude Include="graphUtils.h" />
     <ClInclude Include="Kruskal.h" />
-    <ClInclude Include="OstovFinder.h" />
     <ClInclude Include="Prim.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

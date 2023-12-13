@@ -5,16 +5,16 @@
 class Edge {
 public:
 	Edge();
-	Edge(int v1, int v2, int weight);
+	Edge(int vertice1, int vertice2, int weight);
 
 	int v1() const;
-	void v1(int _v1);
+	void v1(int newFirstVertice);
 
 	int v2() const;
-	void v2(int _v2);
+	void v2(int newSecondVertice);
 
 	int weight() const;
-	void weight(int _weight);
+	void weight(int newWeight);
 
 private:
 	std::pair<std::pair<int, int>, int> _edge;
