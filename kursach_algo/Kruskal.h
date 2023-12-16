@@ -11,10 +11,11 @@ public:
 	Kruskal(int vertices, int edges, std::vector<Edge>& graph);
 	std::vector<Edge> find();
 	void changeGraph(int vertices, int edges, std::vector<Edge>& graph);
-	int ostovSum();
+	//int ostovSum();
 
 private:
-	int _v, _e, _ostov_sum;	
+	int _v, _e;
+	//_ostov_sum;
 	std::vector<Edge> _graph;
 	std::vector<int> _link = std::vector<int>(_v + 1);
 	std::vector<int> _size = std::vector<int>(_v + 1, 1);

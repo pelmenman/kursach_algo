@@ -1,6 +1,6 @@
 #include "Kruskal.h"
 
-Kruskal::Kruskal(int vertices, int edges, std::vector<Edge>& graph) : _v{ vertices }, _e{ edges }, _graph{ graph }, _ostov_sum { 0 } {
+Kruskal::Kruskal(int vertices, int edges, std::vector<Edge>& graph) : _v{ vertices }, _e{ edges }, _graph{ graph } {
 	std::iota(_link.begin(), _link.end(), 0);
 }
 
@@ -30,7 +30,7 @@ std::vector<Edge> Kruskal::find() {
 			_unite(g.v1(), g.v2());
 
 			ostov.push_back(g);
-			_ostov_sum += g.weight();
+			//_ostov_sum += g.weight();
 		}
 	}
 
@@ -42,10 +42,10 @@ void Kruskal::changeGraph(int vertices, int edges, std::vector<Edge>& graph) {
 	_v = vertices;
 	_e = edges;
 	_graph = graph;
-	_ostov_sum = 0;
+	//_ostov_sum = 0;
 	_link = std::vector<int>(_v + 1);
 	std::iota(_link.begin(), _link.end(), 0);
 	_size = std::vector<int>(_v + 1, 1);
 }
 
-int Kruskal::ostovSum() { return _ostov_sum; }
+//int Kruskal::ostovSum() { return _ostov_sum; }

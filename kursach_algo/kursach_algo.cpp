@@ -7,26 +7,37 @@
 #include <limits>
 #include "Prim.h"
 
-void print(std::priority_queue<Edge> q) {
-	while (!q.empty()) {
-		std::cout << q.top() << std::endl;
-		q.pop();
-	}
-}
-
 int main() {
 	//TEST 1
+	std::cout << "TEST1: KRUSKAL\n";
 	auto k1_result = kruskalFindFrom("test1.txt");
-	std::cout << k1_result.second << std::endl;
+	
+	print(k1_result.first);
+	std::cout << std::endl;
 
+	std::cout << "WEIGHT:\n";
+	std::cout << k1_result.second << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "TEST1: PRIM\n";
 	auto p1_result = primFindFrom("test1.txt");
-	std::cout << p1_result << std::endl;
+	
+	print(p1_result.first);
+	std::cout << std::endl;
+
+	std::cout << "WEIGHT:\n";
+	std::cout <<  p1_result.second << std::endl;
+	std::cout << std::endl;
 
 	//TEST 2
+	std::cout << "TEST2: KRUSKAL\n";
 	auto k2_result = kruskalFindFrom("test2.txt");
 	std::cout << k2_result.second << std::endl;
 
+	std::cout << std::endl;
+
+	std::cout << "TEST2: PRIM\n";
 	auto p2_result = primFindFrom("test2.txt");
-	std::cout << p2_result << std::endl;
+	std::cout << p2_result.second << std::endl;
 }
 

@@ -5,12 +5,13 @@
 #include "Prim.h"
 #include <fstream>
 #include <vector>
-
 using result = std::pair<std::vector<Edge>, int>;
+
+int ostov_sum(const std::vector<Edge>& ostov);
 
 result kruskalFindFrom(std::string fileName);
 
-int primFindFrom(std::string fileName);
+result primFindFrom(std::string fileName);
 
 void print(const std::vector<Edge>& graph);
 
