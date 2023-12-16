@@ -24,6 +24,29 @@ result kruskalFindFrom(std::string fileName) {
 	return { ostov, kruskal.ostovSum() };
 }
 
+int primFindFrom(std::string fileName) {
+	std::ifstream input(fileName);
+	int vertices, edges;
+
+	input >> vertices; input >> edges;
+	std::vector<std::vector<std::pair<int, int>>> graph(vertices + 1);
+
+	if (input.is_open()) {
+
+		int v1, v2, weight;
+
+		while (input >> v1 >> v2 >> weight) {
+			graph[v1].push_back({ weight, v2 });
+			graph[v2].push_back({ weight, v1 });
+		}
+	}
+
+	input.close();
+
+	Prim prim = Prim(vertices, edges, graph);
+	return prim.find();
+}
+
 void print(const std::vector<Edge>& graph) {
 	for (const auto& edge : graph) {
 		std::cout << edge << std::endl;
