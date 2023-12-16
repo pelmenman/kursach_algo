@@ -30,3 +30,25 @@ void print(const std::vector<Edge>& graph) {
 	}
 	std::cout << std::endl;
 }
+
+bool compareByFirstVertice(const Edge& edge, const Edge& other) { return edge.v1() < other.v1(); }
+
+bool compareByFirstVerticeAndWeight(const Edge& edge, const Edge& other) { 
+	if (edge.v1() == other.v1()) {
+		return edge.weight() < other.weight();
+	}
+	else {
+		return edge.v1() < other.v1();
+	}
+}
+
+bool compareByFirstVerticeAndWeightAsc(const Edge& edge, const Edge& other) { 
+	if (edge.v1() == other.v1()) {
+		return edge.weight() > other.weight();
+	}
+	else {
+		return edge.v1() > other.v1();
+	}
+}
+
+bool compareByWeightAsc(const Edge& edge, const Edge& other) { return edge.weight() > other.weight(); }

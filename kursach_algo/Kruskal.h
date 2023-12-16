@@ -4,6 +4,7 @@
 #include "Edge.h"
 #include <algorithm>
 #include <numeric>
+#include "graphUtils.h"
 
 class Kruskal {
 public:

@@ -27,4 +27,3 @@ bool operator < (const Edge& edge, const Edge& other);
 bool operator > (const Edge& edge, const Edge& other);
 bool operator == (const Edge& edge, const Edge& other);
 bool operator != (const Edge& edge, const Edge& other);
-bool compareByFirstVertice(Edge& edge, Edge& other);

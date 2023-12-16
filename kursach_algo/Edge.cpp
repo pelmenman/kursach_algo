@@ -30,4 +30,3 @@ bool operator == (const Edge& edge, const Edge& other) { return edge.weight() ==
 bool operator != (const Edge& edge, const Edge& other) { return !(edge == other); }
 bool operator < (const Edge& edge, const Edge& other) { return edge.weight() < other.weight(); }
 bool operator > (const Edge& edge, const Edge& other) { return !(edge < other) && (edge != other); }
-bool compareByFirstVertice(Edge& edge, Edge& other) { return edge.v1() < other.v1(); }
